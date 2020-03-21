@@ -1,0 +1,109 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "Fully Customizable Countdown Timer!\r\n\r\nYou can set the following:\r\n- Background\r\n- Title\r\n- Date\r\n- Completion Message\r\n- Countdown Position\r\n- Size Scale\r\n\r\nDiscord: https://discord.gg/plexidev\r\nFeature suggestions welcome!",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"background_image" : 
+			{
+				"order" : 105,
+				"text" : "Background Image",
+				"type" : "file",
+				"value" : ""
+			},
+			"completion_message" : 
+			{
+				"order" : 102,
+				"text" : "Completion Message",
+				"type" : "textinput",
+				"value" : "Completed!"
+			},
+			"countdown_background" : 
+			{
+				"order" : 106,
+				"text" : "Countdown Background",
+				"type" : "file",
+				"value" : ""
+			},
+			"countdown_background_dimensions_e_g_200x100_" : 
+			{
+				"condition" : "countdown_background.value",
+				"order" : 107,
+				"text" : "Countdown Dimensions (e.g. 200x100)",
+				"type" : "textinput",
+				"value" : ""
+			},
+			"countdown_title" : 
+			{
+				"order" : 100,
+				"text" : "Countdown Title",
+				"type" : "textinput",
+				"value" : "Time Remaining"
+			},
+			"date" : 
+			{
+				"order" : 101,
+				"text" : "Date",
+				"type" : "textinput",
+				"value" : "Mar 31, 2021 15:37:25"
+			},
+			"position" : 
+			{
+				"options" : 
+				[
+					{
+						"label" : "Center",
+						"value" : "center"
+					},
+					{
+						"label" : "Top Left",
+						"value" : "top_left"
+					},
+					{
+						"label" : "Top Right",
+						"value" : "top_right"
+					},
+					{
+						"label" : "Bottom Left",
+						"value" : "bottom_left"
+					},
+					{
+						"label" : "Bottom Right",
+						"value" : "bottom_right"
+					}
+				],
+				"order" : 103,
+				"text" : "Position",
+				"type" : "combo",
+				"value" : "center"
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0 0 0"
+			},
+			"size_scale" : 
+			{
+				"fraction" : true,
+				"max" : 5,
+				"min" : 1,
+				"order" : 104,
+				"precision" : 2,
+				"step" : 0.10000000000000001,
+				"text" : "Size Scale",
+				"type" : "slider",
+				"value" : 1
+			}
+		}
+	},
+	"preview" : "preview.jpg",
+	"tags" : [ "Technology" ],
+	"title" : "Fully Customizable Countdown",
+	"type" : "web",
+	"visibility" : "public",
+	"workshopid" : "2027703875"
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="common/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <img id="wallpaper" alt="Select an image in the settings!">
+        <div id="timer">
+            <span id="title"></span><br>
+            <span id="countdown"></span>
+        </div>
+    </div>
+
+    <script src="common/index.js"></script>
+    <script>
+        var countdown = null;
+
+        window.wallpaperPropertyListener = {
+            applyUserProperties: function (properties) {
+
+                // Countdown Title
+                if (properties.countdown_title) document.querySelector('#title').innerHTML = properties.countdown_title.value.trim() || 'Countdown Title';
+
+                // Countdown Date & Completion Message
+                if (properties.date) {
+                    if (countdown) clearInterval(countdown);
+                    countdown = setCountdown('#countdown', properties.date.value.trim(), properties.completion_message ? properties.completion_message.value.trim() : 'Completed!');
+                }
+
+                // Position
+                if (properties.position) document.querySelector('#timer').classList = properties.position.value;
+
+                // Size Scale
+                if (properties.size_scale) {
+                    document.querySelector('#timer').style.fontSize = (16 * properties.size_scale.value) + 'px';
+                    document.querySelector('#timer').style.padding = (10 * properties.size_scale.value) + 'px';
+                }
+
+                // Background Image
+                if (properties.background_image) document.querySelector('#wallpaper').src = properties.background_image.value ? 'file:///' + properties.background_image.value : 'default_background.jpg';
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
