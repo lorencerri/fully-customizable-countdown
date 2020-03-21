@@ -6,6 +6,11 @@
 	{
 		"properties" : 
 		{
+			"_header" : 
+			{
+				"order" : 99,
+				"text" : "<b>Thank you for using this wallpaper,</b><br><i>feature suggestions welcome on the Steam page!</i>"
+			},
 			"background_image" : 
 			{
 				"order" : 105,
@@ -19,21 +24,6 @@
 				"text" : "Completion Message",
 				"type" : "textinput",
 				"value" : "Completed!"
-			},
-			"countdown_background" : 
-			{
-				"order" : 106,
-				"text" : "Countdown Background",
-				"type" : "file",
-				"value" : ""
-			},
-			"countdown_background_dimensions_e_g_200x100_" : 
-			{
-				"condition" : "countdown_background.value",
-				"order" : 107,
-				"text" : "Countdown Dimensions (e.g. 200x100)",
-				"type" : "textinput",
-				"value" : ""
 			},
 			"countdown_title" : 
 			{
